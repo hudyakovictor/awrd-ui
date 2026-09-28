@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-abyss: #0b1120;
+  --color-deep: #121b2e;
+  --color-panel: #1b2740;
+  --color-panel2: #243250;
+  --color-teal: #3ec9a7;
+  --color-teal-d: #2a8d77;
+  --color-gold: #f2c14e;
+  --color-gold-d: #b8862a;
+  --color-purple: #9d8cf5;
+  --color-coral: #e46a5f;
+  --color-sky: #5b9cd6;
+  --color-mist: #8fa4c7;
+  --font-ui: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #090e1a;
+  color: #e9eefb;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #3ec9a7; color: #08121a; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: #22304d; border-radius: 99px; border: 2px solid #090e1a; }
+.no-bar::-webkit-scrollbar { display: none; }
+.no-bar { scrollbar-width: none; }
+
+/* ---------- surfaces of the game ---------- */
+.panel {
+  background: linear-gradient(180deg, #223250 0%, #1a2540 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 14px 34px -14px rgba(0, 0, 0, 0.85);
+}
+.panel-sunk {
+  background: linear-gradient(180deg, #141d33 0%, #18223b 100%);
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+.chip-3d {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 4px 0 rgba(0,0,0,.35), 0 10px 20px -8px rgba(0,0,0,.8);
+}
+.emboss { text-shadow: 0 2px 0 rgba(0,0,0,.35); }
+
+.glow-teal { box-shadow: 0 0 0 1px rgba(62,201,167,.45), 0 0 30px -6px rgba(62,201,167,.65); }
+.glow-gold { box-shadow: 0 0 0 1px rgba(242,193,78,.5), 0 0 34px -6px rgba(242,193,78,.7); }
+.glow-purple { box-shadow: 0 0 0 1px rgba(157,140,245,.5), 0 0 34px -6px rgba(157,140,245,.7); }
+
+/* ---------- phone chrome ---------- */
+.phone-shell {
+  background: linear-gradient(160deg, #26324c, #0d1424);
+  padding: 8px;
+  border-radius: 38px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 40px 80px -30px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.14);
+}
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 31px;
+  background: radial-gradient(120% 70% at 50% 0%, #1a2540 0%, transparent 60%), #101827;
+  isolation: isolate;
+}
+
+.vignette::after {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 70px rgba(0,0,0,.55);
+}
+
+.noise::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .035; z-index: 40;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.sheen { position: relative; overflow: hidden; }
+.sheen::after {
+  content: ""; position: absolute; top: -140%; left: -70%;
+  width: 45%; height: 380%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+  transform: rotate(16deg);
+  animation: sheenRun 3.6s var(--ease-io) infinite;
+}
+@keyframes sheenRun { 0%, 55% { left: -70% } 88%, 100% { left: 150% } }
+
+.aurora {
+  position: absolute; inset: -25%;
+  background:
+    radial-gradient(34% 38% at 24% 26%, rgba(62,201,167,.26), transparent 62%),
+    radial-gradient(32% 36% at 78% 20%, rgba(157,140,245,.24), transparent 60%),
+    radial-gradient(40% 40% at 55% 84%, rgba(242,193,78,.16), transparent 62%);
+  filter: blur(40px);
+  animation: drift 26s var(--ease-io) infinite alternate;
+}
+@keyframes drift {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1) }
+  50% { transform: translate3d(3%, 2%, 0) scale(1.1) }
+  100% { transform: translate3d(-1%, 3%, 0) scale(1.04) }
+}
+
+.mesh {
+  background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(70% 60% at 50% 40%, #000, transparent 75%);
+}
+
+.title-xl { font-weight: 800; letter-spacing: -0.03em; line-height: 0.92; }
+.mono { font-family: var(--font-mono); }
+
+.text-grad {
+  background: linear-gradient(96deg, #3ec9a7, #7fe3c6 30%, #f2c14e 62%, #9d8cf5);
+  background-size: 260% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: pan 9s linear infinite;
+}
+@keyframes pan { to { background-position: 260% 0 } }
+
+@keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
+.bob { animation: bob 4.6s ease-in-out infinite; }
+
+@keyframes ringOut { 0% { transform: scale(.65); opacity: .85 } 100% { transform: scale(2.1); opacity: 0 } }
+.ring-out { animation: ringOut 1.8s var(--ease-out) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* =====================================================================
+   ПОЛИРОВКА v3 — материалы, свет, текстуры, состояния
+   ===================================================================== */
+
+/* ---------- глубина панелей: свет сверху, тень снизу ---------- */
+.panel-hi {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.015) 38%, rgba(0, 0, 0, 0.16) 100%),
+    linear-gradient(180deg, #223250 0%, #18213a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+    0 18px 42px -20px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------- стеклянный слой для оверлеев ---------- */
+.glass {
+  background: linear-gradient(180deg, rgba(28, 40, 66, 0.82), rgba(16, 24, 42, 0.86));
+  backdrop-filter: blur(18px) saturate(1.25);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* ---------- анимированная градиентная кромка ---------- */
+.edge-flow {
+  position: relative;
+  isolation: isolate;
+}
+.edge-flow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--a, 0deg), transparent 0 55%, rgba(62, 201, 167, 0.85) 70%, transparent 85%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: edgeSpin 5s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes edgeSpin {
+  to {
+    --a: 360deg;
+  }
+}
+
+/* ---------- мягкий «дышащий» ореол ---------- */
+.halo {
+  position: relative;
+}
+.halo::after {
+  content: "";
+  position: absolute;
+  inset: -22%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--halo, rgba(62, 201, 167, 0.35)), transparent 68%);
+  filter: blur(18px);
+  z-index: -1;
+  animation: haloPulse 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes haloPulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.94); }
+  50% { opacity: 0.85; transform: scale(1.08); }
+}
+
+/* ---------- диагональная штриховка (для «заблокировано») ---------- */
+.hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.05) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+/* ---------- сетка‑подложка секций ---------- */
+.grid-floor {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(75% 65% at 50% 35%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(75% 65% at 50% 35%, #000 0%, transparent 78%);
+}
+
+/* ---------- виньетка экрана телефона ---------- */
+.screen-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 85% at 50% 40%, transparent 55%, rgba(0, 0, 0, 0.42) 100%);
+  z-index: 25;
+}
+
+/* ---------- блик по стеклу телефона ---------- */
+.screen-gloss::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 26;
+  background: linear-gradient(118deg, rgba(255, 255, 255, 0.09) 0%, transparent 34%, transparent 62%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+/* ---------- скролл ---------- */
+.no-bar::-webkit-scrollbar { display: none; }
+.no-bar { scrollbar-width: none; }
+
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: #090e1a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2c3d5e, #1d2942);
+  border: 2px solid #090e1a;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #3b527d, #253352); }
+
+/* ---------- выделение и фокус ---------- */
+::selection { background: rgba(62, 201, 167, 0.32); color: #eaf6ff; }
+:focus-visible {
+  outline: 2px solid rgba(62, 201, 167, 0.75);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* ---------- слайдеры тюнера ---------- */
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff, #cfe0f7);
+  border: 2px solid currentColor;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.14s cubic-bezier(0.16, 1, 0.3, 1);
+}
+input[type="range"]::-webkit-slider-thumb:active { transform: scale(1.22); }
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #eaf2ff;
+  border: 2px solid currentColor;
+}
+
+/* ---------- клавиши ---------- */
+kbd {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- утилита обрезки строк ---------- */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- реакция на системную настройку ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .edge-flow::before,
+  .halo::after {
+    animation: none !important;
+  }
+}
+
+/* =====================================================================
+   ПОЛИРОВКА v4 — материалы коллекции, календаря, колец и таймлайнов
+   ===================================================================== */
+
+/* ---------- блик по грани карты ---------- */
+.card-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.card-sheen::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -60%;
+  width: 40%;
+  height: 340%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: rotate(18deg);
+  animation: cardSheen 5.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  pointer-events: none;
+}
+@keyframes cardSheen {
+  0%, 62% { left: -60%; }
+  88%, 100% { left: 140%; }
+}
+
+/* ---------- витринный подиум ---------- */
+.podium {
+  background:
+    radial-gradient(58% 34% at 50% 100%, rgba(255, 255, 255, 0.07), transparent 70%),
+    linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.32) 100%);
+}
+
+/* ---------- свечение редкости ---------- */
+.rarity-legend {
+  box-shadow: 0 0 0 1px rgba(242, 193, 78, 0.55), 0 12px 30px -14px rgba(242, 193, 78, 0.65);
+}
+.rarity-epic {
+  box-shadow: 0 0 0 1px rgba(157, 140, 245, 0.5), 0 12px 30px -14px rgba(157, 140, 245, 0.6);
+}
+.rarity-mythic {
+  box-shadow: 0 0 0 1px rgba(228, 106, 95, 0.55), 0 14px 34px -14px rgba(228, 106, 95, 0.7);
+}
+
+/* ---------- рейка таймлайна ---------- */
+.rail {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 6px, transparent 6px 14px);
+  background-size: 14px 100%;
+}
+.rail-live {
+  background-image: linear-gradient(90deg, rgba(62, 201, 167, 0.5) 0 6px, transparent 6px 14px);
+  background-size: 14px 100%;
+  animation: railSlide 1.4s linear infinite;
+}
+@keyframes railSlide {
+  to {
+    background-position-x: 14px;
+  }
+}
+
+/* ---------- календарный столбец ---------- */
+.day-bar {
+  border-radius: 8px;
+  transition:
+    height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.day-bar:hover {
+  filter: brightness(1.18);
+}
+
+/* ---------- стекло на статусных чипах ---------- */
+.chip-glass {
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- «жидкий» фон под панелью акцента ---------- */
+.accent-wash {
+  position: relative;
+  isolation: isolate;
+}
+.accent-wash::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--wash, rgba(62, 201, 167, 0.14));
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+/* ---------- фаска на крупных карточках ---------- */
+.bevel {
+  position: relative;
+}
+.bevel::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), transparent 36%);
+  pointer-events: none;
+}
+
+/* ---------- тонкая штриховка «стекла» приборов ---------- */
+.instrument {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.22)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 7px);
+}
+
+/* ---------- мягкий разделитель ---------- */
+.divider-h {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+}
+
+/* ---------- градиентный текст для чисел ---------- */
+.num-grad {
+  background: linear-gradient(180deg, #eaf2ff, #8fa4c7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- подсветка при наведении по контуру ---------- */
+.hover-edge {
+  position: relative;
+}
+.hover-edge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  box-shadow: inset 0 0 0 1px rgba(62, 201, 167, 0.55), 0 14px 32px -18px rgba(62, 201, 167, 0.8);
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.hover-edge:hover::after {
+  opacity: 1;
+}
+
+/* ---------- размеры и ритм под тач ---------- */
+.tap-target {
+  min-height: 44px;
+}
+button {
+  font-family: inherit;
+}
+
+/* ---------- печать заголовков в спеке ---------- */
+.spec-h {
+  font-family: var(--font-display, inherit);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* ---------- отключение тяжёлого декора на слабых устройствах ---------- */
+@media (max-width: 420px) {
+  .halo::after,
+  .card-sheen::after,
+  .edge-flow::before {
+    display: none;
+  }
+}
