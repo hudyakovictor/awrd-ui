@@ -1,0 +1,962 @@
+[
+  {
+    "id": 1,
+    "factor": "Нет обратного отсчёта в ядре (C1)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 2,
+    "factor": "Скорость вне Quality Score (C2)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 3,
+    "factor": "Решений ≤7 (C3)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 4,
+    "factor": "Давление отдельной осью (C4)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 5,
+    "factor": "≥2 механики на навык (C5)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 6,
+    "factor": "Нет 3 повторов подряд (C6)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 7,
+    "factor": "Укрощение ≥12 заданий (C7)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 8,
+    "factor": "Подворотни ≤3/день, бесплатно (C8)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 9,
+    "factor": "futureHash на сценарий (C9)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 10,
+    "factor": "Академия бесплатна (C10)",
+    "check": "Юнит-тест схемы задания + линтер конфига",
+    "category": "Канон",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 11,
+    "factor": "Доля ≥95 в 10–20%",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 12,
+    "factor": "Winrate новичка 60–75%",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 13,
+    "factor": "8–14 задач/сессия",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 14,
+    "factor": "≥85% доходят до экзамена A",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 15,
+    "factor": "Первое укрощение 2–4 дня",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 16,
+    "factor": "D1 ≥40%",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 17,
+    "factor": "D7 ≥18%",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 18,
+    "factor": "D30 ≥8%",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 19,
+    "factor": "Сессия 8–12 мин",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 20,
+    "factor": "1.5–2 сессии/день",
+    "check": "Телеметрия на выборке 30 прохождений",
+    "category": "KPI",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 21,
+    "factor": "Показ до первого боя",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 22,
+    "factor": "Проба без оценки",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 23,
+    "factor": "Правило одной строкой",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 24,
+    "factor": "Первый бой со сниженной сложностью",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 25,
+    "factor": "Подсказки убираются по графику",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 26,
+    "factor": "Повтор обучения по запросу",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 27,
+    "factor": "Обучение ≤40 сек",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 28,
+    "factor": "Нет текста длиннее 2 строк",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 29,
+    "factor": "Словарь только из пройденного",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 30,
+    "factor": "Пропуск обучения для повторного игрока",
+    "check": "Снапшот-тест онбординга + ручное ревью",
+    "category": "Обучение механике",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 31,
+    "factor": "Уникальный глиф",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 32,
+    "factor": "Уникальное короткое имя ≤9 симв.",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 33,
+    "factor": "Цвет семейства",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 34,
+    "factor": "Форма-подложка семейства",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 35,
+    "factor": "Глагол действия одной строкой",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 36,
+    "factor": "Глиф читается в 24px",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 37,
+    "factor": "Различимость при дальтонизме",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 38,
+    "factor": "Имя не дублирует карту навыка",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 39,
+    "factor": "Имя не дублирует сущность",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 40,
+    "factor": "Глиф в 3 состояниях: новый/освоен/ржавеет",
+    "check": "Визуальное ревью + тест контраста",
+    "category": "Мнемоника",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 41,
+    "factor": "Текст уровня A без терминов",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 42,
+    "factor": "Текст уровня B с терминами глав A–E",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 43,
+    "factor": "Текст уровня C полный",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 44,
+    "factor": "Автовыбор уровня по профилю",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 45,
+    "factor": "Нет forward-ссылок на неизученное",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 46,
+    "factor": "Термин при первом показе — с тултипом",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 47,
+    "factor": "Тултип ведёт в параграф",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 48,
+    "factor": "Повторное объяснение при возврате после 30 дней",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 49,
+    "factor": "Язык описания проверен линтером словаря",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 50,
+    "factor": "Переключение уровня вручную",
+    "check": "lexicon-lint.ts (авто)",
+    "category": "Прогрессивное раскрытие",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 51,
+    "factor": "Таргет ≥44pt",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 52,
+    "factor": "Действия в нижней трети",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 53,
+    "factor": "Один палец достаточен",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 54,
+    "factor": "Отмена последнего действия",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 55,
+    "factor": "Состояние сохраняется при сворачивании",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 56,
+    "factor": "Отклик ≤100 мс",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 57,
+    "factor": "Haptic на подтверждение",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 58,
+    "factor": "Нет жестов, конфликтующих с Telegram",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 59,
+    "factor": "Скролл не конфликтует с драгом",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 60,
+    "factor": "Клавиатура не перекрывает поле",
+    "check": "Playwright + ручной тест на устройстве",
+    "category": "Интерактив",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 61,
+    "factor": "Длительность по токенам --t-*",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 62,
+    "factor": "Кривые по токенам --e-*",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 63,
+    "factor": "prefers-reduced-motion",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 64,
+    "factor": "Без анимации >600 мс в ядре",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 65,
+    "factor": "60 fps на среднем Android",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 66,
+    "factor": "Раскрытие будущего 120 мс/свеча",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 67,
+    "factor": "Нет анимации, блокирующей ввод",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 68,
+    "factor": "AnimatePresence на размонтирование",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 69,
+    "factor": "Скелетоны на загрузку",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 70,
+    "factor": "Празднование только на закрытии ошибки",
+    "check": "Профайлер + флаг reduced-motion",
+    "category": "Анимация",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 71,
+    "factor": "9 измерений",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 72,
+    "factor": "Веса по canon",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 73,
+    "factor": "Скорости среди измерений нет",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 74,
+    "factor": "Частичный балл",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 75,
+    "factor": "Штраф за лишний флаг",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 76,
+    "factor": "Рубрика версионируется",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 77,
+    "factor": "Разбор по каждому измерению",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 78,
+    "factor": "decision_trace пишется всегда",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 79,
+    "factor": "Теневые калибровочные 5%",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 80,
+    "factor": "Пересчёт при смене рубрики",
+    "check": "Юнит-тест calculateQualityScore",
+    "category": "Оценка",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 81,
+    "factor": "error_ledger пишет каждый промах",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 82,
+    "factor": "Показ блокирующего навыка",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 83,
+    "factor": "Показ повторяющейся ошибки",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 84,
+    "factor": "Targeted practice из журнала",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 85,
+    "factor": "Отделение незнания от срыва дисциплины",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 86,
+    "factor": "Нет фразы «попробуй ещё раз»",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 87,
+    "factor": "Серия за закрытый разбор (C13)",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 88,
+    "factor": "spaced_queue +1/3/7/16/35 (C12)",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 89,
+    "factor": "Закрытие = атрибуция + успешный повтор",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 90,
+    "factor": "Тупик Наставника на 3 ошибки",
+    "check": "E2E сценарий «3 промаха → разбор»",
+    "category": "Ошибки и плато",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 91,
+    "factor": "Сундуки только бесплатные (C15)",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 92,
+    "factor": "Шансы раскрыты до открытия",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 93,
+    "factor": "Нет продажи ответов",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 94,
+    "factor": "Нет продажи преимущества",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 95,
+    "factor": "Нет продажи случайности",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 96,
+    "factor": "Барьер реальности показан",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 97,
+    "factor": "Нет обещания прибыли",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 98,
+    "factor": "Кнопка «пройти мимо» всегда",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 99,
+    "factor": "Нет тёмных паттернов в оплате",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 100,
+    "factor": "Возрастной гейт",
+    "check": "Юридический чек-лист + ревью",
+    "category": "Этика",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 101,
+    "factor": "Фидбек о процессе, не о личности",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 102,
+    "factor": "Нет «ты ошибся»",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 103,
+    "factor": "Нет публичного падения ранга",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 104,
+    "factor": "Ошибка = данные, не наказание",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 105,
+    "factor": "Похвала за процесс",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 106,
+    "factor": "Нет сравнения с другими в ядре",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 107,
+    "factor": "Нет стыда за паузу",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 108,
+    "factor": "Формулировки проверены редактором",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 109,
+    "factor": "Тон одинаков во всех механиках",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 110,
+    "factor": "Локализация не ломает тон",
+    "check": "Редакторское ревью всех строк",
+    "category": "Фрейминг",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 111,
+    "factor": "Механика = отдельный модуль",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 112,
+    "factor": "Контракт props типизирован Zod",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 113,
+    "factor": "Детерминизм по seed",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 114,
+    "factor": "Юнит-тест на скоринг",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 115,
+    "factor": "Снапшот-тест на разметку",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 116,
+    "factor": "E2E на полный проход",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "external",
+    "evidence": "requires measured or external review"
+  },
+  {
+    "id": 117,
+    "factor": "Фикстуры сценариев",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 118,
+    "factor": "Storybook-стенд",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "partial",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 119,
+    "factor": "Метрики телеметрии с первого дня",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  },
+  {
+    "id": 120,
+    "factor": "Фича-флаг на каждую механику",
+    "check": "CI: типы, тесты, сборка",
+    "category": "Инженерия",
+    "buildStatus": "pass",
+    "evidence": "fixtures/ and tests/"
+  }
+]

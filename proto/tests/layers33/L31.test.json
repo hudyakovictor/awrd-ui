@@ -1,0 +1,15 @@
+{
+  "mechanic": "L31",
+  "checks": [
+    "load",
+    "three modes",
+    "caps",
+    "future hidden",
+    "confidence",
+    "telemetry",
+    "seed replay",
+    "reduced motion",
+    "no paid power",
+    "debrief"
+  ]
+}

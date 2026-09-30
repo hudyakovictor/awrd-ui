@@ -1,0 +1,79 @@
+{
+  "mechanic": "L03",
+  "name": "Risk First",
+  "version": "1.0.0",
+  "featureFlag": "feature_l03",
+  "seed": 4103,
+  "cases": [
+    {
+      "id": "L03-novice",
+      "mode": "novice",
+      "decisions": 1,
+      "sources": 1,
+      "pressure": 1,
+      "scored": false,
+      "futureVisible": false
+    },
+    {
+      "id": "L03-guided",
+      "mode": "guided",
+      "decisions": 2,
+      "sources": 1,
+      "pressure": 2,
+      "scored": true,
+      "futureVisible": false
+    },
+    {
+      "id": "L03-advanced",
+      "mode": "advanced",
+      "decisions": 3,
+      "sources": 2,
+      "pressure": 2,
+      "scored": true,
+      "futureVisible": false,
+      "requiresExplanation": true
+    }
+  ],
+  "telemetry": [
+    "correct",
+    "latency",
+    "confidence",
+    "sources_on_screen",
+    "decisions_count",
+    "slots_used",
+    "redundant_slots",
+    "chunk_id",
+    "context_id",
+    "rule_applied",
+    "failure_class"
+  ],
+  "invariants": [
+    "speed outside score",
+    "future hidden",
+    "no paid advantage"
+  ],
+  "scoring": {
+    "options": [
+      {
+        "id": "best",
+        "weight": 100
+      },
+      {
+        "id": "partial",
+        "weight": 60
+      },
+      {
+        "id": "weak",
+        "weight": 20
+      },
+      {
+        "id": "trap",
+        "weight": 0
+      }
+    ],
+    "extraCardPenalty": 15,
+    "falseFlagPenalty": 10,
+    "reorderPenalty": 15,
+    "speedIncluded": false
+  }
+}

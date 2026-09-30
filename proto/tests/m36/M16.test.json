@@ -1,0 +1,15 @@
+{
+  "mechanic": "M16",
+  "checks": [
+    "fixture loads",
+    "three modes exist",
+    "decisions <= 7",
+    "sources <= 4",
+    "novice is unscored",
+    "future hidden before seal",
+    "confidence before answer",
+    "telemetry contract complete",
+    "replay deterministic",
+    "feature flag present"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "mechanic": "M08",
+  "name": "Разметка зон S/R",
+  "version": "1.0.0",
+  "featureFlag": "mechanic_m08",
+  "seed": 1708,
+  "cases": [
+    {
+      "id": "M08-novice",
+      "mode": "novice",
+      "level": 2,
+      "decisions": 2,
+      "sources": 1,
+      "pressure": 1,
+      "copyLevel": "plain",
+      "scored": false,
+      "futureVisible": false
+    },
+    {
+      "id": "M08-guided",
+      "mode": "guided",
+      "level": 3,
+      "decisions": 3,
+      "sources": 2,
+      "pressure": 2,
+      "copyLevel": "guided",
+      "scored": true,
+      "futureVisible": false
+    },
+    {
+      "id": "M08-advanced",
+      "mode": "advanced",
+      "level": 5,
+      "decisions": 3,
+      "sources": 2,
+      "pressure": 3,
+      "copyLevel": "technical",
+      "scored": true,
+      "futureVisible": false,
+      "requiresExplanation": true
+    }
+  ],
+  "invariants": [
+    "no future before seal",
+    "speed outside quality score",
+    "no paid advantage",
+    "no profit promise",
+    "no timer in core"
+  ],
+  "telemetry": [
+    "correct",
+    "latency",
+    "confidence",
+    "sources_on_screen",
+    "decisions_count",
+    "slots_used",
+    "redundant_slots",
+    "chunk_id",
+    "context_id",
+    "rule_applied",
+    "failure_class"
+  ],
+  "scoring": {
+    "options": [
+      {
+        "id": "best",
+        "weight": 100
+      },
+      {
+        "id": "partial",
+        "weight": 60
+      },
+      {
+        "id": "weak",
+        "weight": 20
+      },
+      {
+        "id": "trap",
+        "weight": 0
+      }
+    ],
+    "extraCardPenalty": 15,
+    "falseFlagPenalty": 10,
+    "reorderPenalty": 15,
+    "speedIncluded": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "mechanic": "L12",
+  "name": "Risk Architect",
+  "version": "1.0.0",
+  "featureFlag": "feature_l12",
+  "seed": 4112,
+  "cases": [
+    {
+      "id": "L12-novice",
+      "mode": "novice",
+      "decisions": 1,
+      "sources": 1,
+      "pressure": 1,
+      "scored": false,
+      "futureVisible": false
+    },
+    {
+      "id": "L12-guided",
+      "mode": "guided",
+      "decisions": 4,
+      "sources": 3,
+      "pressure": 2,
+      "scored": true,
+      "futureVisible": false
+    },
+    {
+      "id": "L12-advanced",
+      "mode": "advanced",
+      "decisions": 6,
+      "sources": 3,
+      "pressure": 3,
+      "scored": true,
+      "futureVisible": false,
+      "requiresExplanation": true
+    }
+  ],
+  "telemetry": [
+    "correct",
+    "latency",
+    "confidence",
+    "sources_on_screen",
+    "decisions_count",
+    "slots_used",
+    "redundant_slots",
+    "chunk_id",
+    "context_id",
+    "rule_applied",
+    "failure_class"
+  ],
+  "invariants": [
+    "speed outside score",
+    "future hidden",
+    "no paid advantage"
+  ],
+  "scoring": {
+    "options": [
+      {
+        "id": "best",
+        "weight": 100
+      },
+      {
+        "id": "partial",
+        "weight": 60
+      },
+      {
+        "id": "weak",
+        "weight": 20
+      },
+      {
+        "id": "trap",
+        "weight": 0
+      }
+    ],
+    "extraCardPenalty": 15,
+    "falseFlagPenalty": 10,
+    "reorderPenalty": 15,
+    "speedIncluded": false
+  }
+}

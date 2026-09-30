@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-09-29T17:57:30Z",
+  "auditVersion": "1.0.0",
+  "checksPerScreen": 26,
+  "scores": [
+    {"prototype": "38 Modules", "score": 98, "pass": 23, "warn": 1, "fail": 0},
+    {"prototype": "Adaptive Evidence Director", "score": 98, "pass": 23, "warn": 1, "fail": 0},
+    {"prototype": "M01–M36 Mechanics Atlas", "score": 98, "pass": 23, "warn": 1, "fail": 0},
+    {"prototype": "46 Mechanics Bench", "score": 98, "pass": 23, "warn": 1, "fail": 0},
+    {"prototype": "V3 Five-Layer Portfolio", "score": 96, "pass": 22, "warn": 2, "fail": 0},
+    {"prototype": "V2 Dynamics", "score": 98, "pass": 24, "warn": 1, "fail": 0},
+    {"prototype": "V1 Portfolio + Analyst Desk", "score": 98, "pass": 23, "warn": 1, "fail": 0},
+    {"prototype": "Motion & Input Lab", "score": 98, "pass": 24, "warn": 1, "fail": 0},
+    {"prototype": "120-factor Readiness Bench", "score": 96, "pass": 22, "warn": 2, "fail": 0}
+  ]
+}

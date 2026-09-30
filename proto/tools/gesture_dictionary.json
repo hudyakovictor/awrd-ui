@@ -1,0 +1,9 @@
+[
+  {"gesture":"tap","meaning":"select","alternative":"Enter or Space"},
+  {"gesture":"swipe_left","meaning":"classify_noise","alternative":"Noise button"},
+  {"gesture":"swipe_right","meaning":"classify_evidence","alternative":"Evidence button"},
+  {"gesture":"hold","meaning":"conscious_commit","alternative":"Hold confirm button"},
+  {"gesture":"drag_vertical","meaning":"reorder","alternative":"Move up/down buttons"},
+  {"gesture":"drag_line","meaning":"set_level","alternative":"Numeric level input"},
+  {"gesture":"pinch","meaning":"zoom_chart","alternative":"Zoom in/out buttons"}
+]
